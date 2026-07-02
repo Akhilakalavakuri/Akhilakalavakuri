@@ -1,77 +1,33 @@
-//****** VOICE OPERATED ON OFF CONTROLS ***
-String readString;
-#define MOTOR
-10
-#define LIGHT 6
-#define BUZZER 13
-#define FAN 9
-//**************************************
-void setup()
-{
-pinMode(MOTOR,OUTPUT);
-pinMode(LIGHT,OUTPUT);
-pinMode(BUZZER,OUTPUT);
-pinMode(FAN,OUTPUT);
-Serial.begin(9600);
-digitalWrite(BUZZER,1);
-delay(500);
-digitalWrite(BUZZER,0);
-delay(500);
-digitalWrite(BUZZER,1);
-delay(500);
-digitalWrite(BUZZER,0);
-delay(500);
-}
-//***************************************
-void loop()
-{
-while(Serial.available())
-{
-delay(3);
-char c = Serial.read();
-readString+=c;
-}
-//
-if(readString.length() >0)
-//
-if(readString == "light on") {
-digitalWrite(LIGHT,1);
-delay(500); }
-else if(readString == "light off") {
-digitalWrite(LIGHT,0);
-delay(500); }
-//
-else if(readString == "motor on") {
-digitalWrite(MOTOR,1);
-delay(500); }
-else if(readString == "motor off") {
-digitalWrite(MOTOR,0);
-delay(500); }
-//
-else if(readString == "fan on") {
-digitalWrite(FAN,1);
-delay(500); }
-else if(readString == "fan off") {
-digitalWrite(FAN,0);
-delay(500);
-}
-// 
-else if(readString == "motor slow")
-{
-analogWrite(MOTOR,170);
-delay(500);
-}
-else if(readString == "motor speed")
-{
-analogWrite(MOTOR,250);
-delay(500);
-}
-// 
-Else
-{
-delay(100);
-}
-readString = "";
-}
-}
-//****************************************
+## 👋 About Me
+
+Embedded Software Engineer passionate about Embedded Systems, C programming, and IoT development.
+
+Currently building embedded projects to strengthen my practical skills and preparing for Embedded Software Development roles.
+
+I enjoy developing low-level software, embedded applications, and IoT solutions.
+
+## 💼 Experience
+
+**Capgemini** | April 2025 – Present
+
+Currently working at Capgemini while continuously enhancing my expertise in Embedded Systems through hands-on projects and continuous learning.
+
+## 🎯 Current Focus
+
+- Building an IoT Device Simulator in C
+- Revising Embedded C concepts
+- Revising Embedded Linux and RTOS
+- Strengthening Data Structures and TCP/IP concepts
+- Preparing for Embedded Software Engineer opportunities
+
+## 🛠️ Skills
+
+- C
+- C++
+- Embedded C
+- ARM7
+- Linux
+- RTOS (Basics)
+- TCP/IP
+- Git & GitHub
+- Wi-Fi (up to Wi-Fi 7)
